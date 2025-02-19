@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC News Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">BBC</a></div>
+        <nav>
+            <ul>
+                <li><a href="#" id="register-btn">Register</a></li>
+                <li><a href="#" id="signin-btn">Sign In</a></li>
+                <button id="theme-toggle">
+                    &#9789;
+                </button>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register</h2>
+            <input type="text" placeholder="Username" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button class="popup-button" onclick="window.location.href = 'index.html';">Register</button>
+            <span class="close-btn" onclick="closePopup('register-popup')">&#10005;</span>
+        </div>
+    </div>
+
+    <div id="signin-popup" class="popup">
+        <div class="popup-content">
+            <h2>Sign In</h2>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button class="popup-button" onclick="window.location.href = 'index.html';">Sign In</button>
+            <span class="close-btn" onclick="closePopup('signin-popup')">&#10005;</span>
+        </div>
+    </div>
+
+    <div class="menu-toggle-container">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sport</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Innovation</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Art</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Earth</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Live</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Newsletters</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <aside class="sidebar">
+            <h2>Latest Updates</h2>
+            <ul>
+                <li><a href="#">Update 1</a></li>
+                <li><a href="#">Update 2</a></li>
+                <li><a href="#">Update 3</a></li>
+            </ul>
+        </aside>
+
+        <section class="news-main">
+            <article class="headline">
+                <h1>Breaking News: Stay Ahead with the Latest Updates!</h1>
+                <p>Your go-to source for the most recent and relevant news across the world. Stay informed with the hottest headlines, technology, and more.</p>
+            </article>
+
+            <div class="news-grid">
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news1')">
+                        <img src="images/OIP.jpg" alt="News 1">
+                        <h2>Global Tech Innovations in 2025</h2>
+                        <p>Discover the most exciting technological breakthroughs expected in 2025. From AI advancements to new gadgets, the future is here.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news2')">
+                        <img src="images/OIP (1).jpg" alt="News 2">
+                        <h2>Climate Change: The Urgent Battle</h2>
+                        <p>As global temperatures rise, scientists are sounding alarms about the consequences of climate change. Learn about what can be done.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news3')">
+                        <img src="images/OIP (2).jpg" alt="News 3">
+                        <h2>Sports: The Rise of Women’s Soccer</h2>
+                        <p>The women's soccer league is gaining global recognition. Here’s why 2025 could be the biggest year for the sport.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="news-main">
+            <div class="news-grid">
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news4')">
+                        <img src="images/OIP (3).jpg" alt="News 4">
+                        <h2>Innovative Architecture Around the World</h2>
+                        <p>Explore the latest trends in architecture, including sustainable buildings and futuristic designs.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news5')">
+                        <img src="images/OIP (8).jpg" alt="News 5">
+                        <h2>Advancements in Space Exploration</h2>
+                        <p>NASA, SpaceX, and other agencies are pushing the limits of space exploration. Here’s what’s on the horizon for humanity.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news6')">
+                        <img src="images/OIP (4).jpg" alt="News 6">
+                        <h2>The Future of Electric Vehicles</h2>
+                        <p>Electric cars are revolutionizing the auto industry. What’s next for the future of transportation?</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="news-main">
+            <div class="news-grid">
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news7')">
+                        <img src="images/OIP (5).jpg" alt="News 7">
+                        <h2>Fashion Trends for 2025</h2>
+                        <p>From high-end couture to streetwear, here’s what’s trending in fashion for the upcoming year.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news8')">
+                        <img src="images/OIP (6).jpg" alt="News 8">
+                        <h2>Artificial Intelligence and Ethics</h2>
+                        <p>As AI continues to evolve, ethical concerns are growing. Let’s take a look at how society is addressing these challenges.</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="javascript:void(0)" onclick="openNews('news9')">
+                        <img src="images/OIP (7).jpg" alt="News 9">
+                        <h2>The Digital Transformation of Education</h2>
+                        <p>The pandemic changed the way we learn, but how will technology shape the future of education? Here’s a glimpse into tomorrow’s classrooms.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BBC News Clone</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
